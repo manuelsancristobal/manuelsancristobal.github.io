@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio | [Tu Nombre]</title>
+    <style>
+        /* Aquí empieza el CSS (El diseño) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+        .btn {
+            display: inline-block;
+            background: #2980b9;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #1a5276;
+        }
+    </style>
+</head>
+<body>
+    <!-- Aquí empieza el contenido visible -->
+    <header>
+        <h1>Hola, soy [Tu Nombre]</h1>
+        <p>Bienvenido a mi portafolio profesional de proyectos</p>
+    </header>
+
+    <div class="container">
+        <h2>Mis Últimos Trabajos</h2>
+
+        <!-- Proyecto 1 -->
+        <div class="project-card">
+            <h3>Nombre de tu primer proyecto</h3>
+            <p>Escribe aquí un resumen detallado sobre tu proyecto. Qué problema resuelve, qué herramientas utilizaste y cuáles fueron los resultados que obtuviste.</p>
+            <a href="LINK_A_TU_PROYECTO" class="btn" target="_blank">Ver Proyecto</a>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="project-card">
+            <h3>Nombre de tu segundo proyecto</h3>
+            <p>Descripción de tu segundo trabajo. Puedes copiar y pegar este bloque "project-card" cuantas veces necesites para agregar más trabajos de la U. de Chile u otros lugares.</p>
+            <a href="LINK_A_TU_PROYECTO" class="btn" target="_blank">Ver Proyecto</a>
+        </div>
+    </div>
+</body>
+</html>
