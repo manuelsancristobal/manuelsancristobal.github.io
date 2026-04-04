@@ -1,6 +1,27 @@
 title: Manuel San Cristóbal
-description: Portafolio Profesional de Inteligencia de Datos
-remote_theme: pages-themes/slate@v0.2.0 # Opcional: puedes quitar esto si prefieres diseño 100% personalizado
+description: Portafolio Profesional de Manuel San Cristóbal (Salomón) - Inteligencia de Datos
+email: msancristo@fen.uchile.cl
+linkedin: manuelsancristobal
+
+# Configuración de GitHub Pages
+url: "https://manuelsancristobal.github.io"
+baseurl: "" # Déjalo vacío si es el repositorio principal (manuelsancristobal.github.io)
+
+# Configuración de Colecciones
+collections:
+  projects:
+    output: true
+    permalink: /proyectos/:path/
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Excluir archivos innecesarios
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .git/

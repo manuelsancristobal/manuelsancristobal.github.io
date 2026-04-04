@@ -1,3 +1,13 @@
 <footer>
-    <p>&copy; 2026 Manuel San Cristóbal. Construido con perseverencia (y mucha ayuda)</p>
+    <div class="footer-content">
+        <p>&copy; {{ "now" | date: "%Y" }} Manuel San Cristóbal. Inteligencia de Datos.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/manuelsancristobal/" target="_blank" onclick="gtag('event', 'click_contacto', {'tipo': 'LinkedIn'});">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:msancristo@fen.uchile.cl" onclick="gtag('event', 'click_contacto', {'tipo': 'Email'});">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
 </footer>

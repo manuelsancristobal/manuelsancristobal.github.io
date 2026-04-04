@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<article class="project-detail">
+    <div class="project-header" style="margin-bottom: 2rem;">
+        <a href="{{ '/' | relative_url }}" class="btn-back"><i class="fas fa-arrow-left"></i> Volver a Proyectos</a>
+        <div class="project-category" style="margin-top: 1.5rem; color: var(--secondary); font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
+            {{ page.category }}
+        </div>
+        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; color: var(--primary);">{{ page.title }}</h1>
+    </div>
+
+    <div class="project-content">
+        {{ content }}
+    </div>
+
+    {% if page.github_url %}
+    <div class="project-links" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
+        <a href="{{ page.github_url }}" class="btn-project" target="_blank">
+            <i class="fab fa-github"></i> Ver en GitHub
+        </a>
+    </div>
+    {% endif %}
+</article>
+
+<style>
+    .btn-back {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: color 0.3s;
+    }
+    .btn-back:hover {
+        color: var(--secondary);
+    }
+    .project-content h2 {
+        margin-top: 2rem;
+    }
+    .project-content p {
+        margin-bottom: 1.2rem;
+        font-size: 1.1rem;
+    }
+</style>

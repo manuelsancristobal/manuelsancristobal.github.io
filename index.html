@@ -9,71 +9,16 @@ description: Portafolio Profesional de Manuel San Cristóbal - Proyectos de Inte
     <h2>Mis Últimos Trabajos</h2>
     
     <div class="projects-grid">
-        
-        <!-- Visualización de Datos -->
+        {% assign projects = site.projects | reverse %}
+        {% for project in projects %}
         <div class="project-card">
             <div class="project-info">
-                <div class="project-category">Visualización de Datos</div>
-                <h3>Clúster de Atractivos Turísticos</h3>
-                <p>Segmentación avanzada de puntos de interés turístico para optimizar la oferta regional.</p>
-                <a href="#" class="btn-project" onclick="gtag('event', 'click_proyecto', {'nombre': 'Cluster Atractivos'});">Ver Detalles</a>
+                <div class="project-category">{{ project.category }}</div>
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <a href="{{ project.url | relative_url }}" class="btn-project" onclick="gtag('event', 'click_proyecto', {'nombre': '{{ project.title }}'});">Ver Detalles</a>
             </div>
         </div>
-
-        <div class="project-card">
-            <div class="project-info">
-                <div class="project-category">Visualización de Datos</div>
-                <h3>GreatCircleLayer: Tráfico Aéreo</h3>
-                <p>Visualización geoespacial de llegadas de pasajeros internacionales en 2024.</p>
-                <a href="#" class="btn-project" onclick="gtag('event', 'click_proyecto', {'nombre': 'GreatCircle Aereo'});">Ver Detalles</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-info">
-                <div class="project-category">Visualización de Datos</div>
-                <h3>ARClayer: Tráfico Nacional</h3>
-                <p>Análisis visual de flujos aéreos entre regiones de Chile.</p>
-                <a href="#" class="btn-project" onclick="gtag('event', 'click_proyecto', {'nombre': 'ARClayer Nacional'});">Ver Detalles</a>
-            </div>
-        </div>
-
-        <!-- Estadística e Inferencia -->
-        <div class="project-card">
-            <div class="project-info">
-                <div class="project-category">Estadística e Inferencia</div>
-                <h3>Inversión Apalancada</h3>
-                <p>Análisis de estrategias de inversión comparando modelos con y sin apalancamiento.</p>
-                <a href="#" class="btn-project" onclick="gtag('event', 'click_proyecto', {'nombre': 'Inversion Apalancada'});">Ver Detalles</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-info">
-                <div class="project-category">Estadística e Inferencia</div>
-                <h3>Proyección Turística</h3>
-                <p>Modelado estadístico para predecir la salida de residentes chilenos al extranjero.</p>
-                <a href="#" class="btn-project" onclick="gtag('event', 'click_proyecto', {'nombre': 'Proyeccion Turistica'});">Ver Detalles</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-info">
-                <div class="project-category">Estadística e Inferencia</div>
-                <h3>Comparativa de Regresión Lineal</h3>
-                <p>Evaluación de diferentes implementaciones de algoritmos de regresión.</p>
-                <a href="#" class="btn-project" onclick="gtag('event', 'click_proyecto', {'nombre': 'Comparativa Regresion'});">Ver Detalles</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-info">
-                <div class="project-category">Tendencias</div>
-                <h3>BarchartRace: Movimiento Aéreo</h3>
-                <p>Visualización dinámica del crecimiento y evolución del tráfico de pasajeros.</p>
-                <a href="#" class="btn-project" onclick="gtag('event', 'click_proyecto', {'nombre': 'BarchartRace Aereo'});">Ver Detalles</a>
-            </div>
-        </div>
-
+        {% endfor %}
     </div>
 </section>
