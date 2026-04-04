@@ -1,0 +1,9 @@
+<header class="hero">
+    <h1>{% if page.header_title %}{{ page.header_title }}{% else %}Manuel San Cristóbal{% endif %}</h1>
+    <p>{% if page.header_subtitle %}{{ page.header_subtitle }}{% else %}Inteligencia de Datos | Visualización | Análisis Estadístico{% endif %}</p>
+</header>
+
+<nav>
+    <a href="{{ '/' | relative_url }}" {% if page.url == "/" or page.url == "/index.html" %}class="active"{% endif %}>Proyectos</a>
+    <a href="{{ '/sobre-mi.html' | relative_url }}" {% if page.url == "/sobre-mi.html" %}class="active"{% endif %}>Sobre Mí</a>
+</nav>

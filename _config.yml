@@ -1,0 +1,6 @@
+title: Manuel San Cristóbal
+description: Portafolio Profesional de Inteligencia de Datos
+remote_theme: pages-themes/slate@v0.2.0 # Opcional: puedes quitar esto si prefieres diseño 100% personalizado
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
