@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Manuel San Cristóbal | Proyectos
-description: Portafolio Profesional de Manuel San Cristóbal - Proyectos de Inteligencia de Datos
+title: Manuel San Cristóbal Opazo | Proyectos
+description: Portafolio Profesional de Manuel San Cristóbal Opazo - Proyectos de Inteligencia de Datos
 ---
 
 <!-- Proyectos -->
@@ -12,6 +12,15 @@ description: Portafolio Profesional de Manuel San Cristóbal - Proyectos de Inte
         {% assign projects = site.projects | reverse %}
         {% for project in projects %}
         <div class="project-card">
+            <div class="project-visual">
+                {% if project.category contains 'Visualización' %}
+                <i class="fas fa-chart-line"></i>
+                {% elsif project.category contains 'Estadística' %}
+                <i class="fas fa-microchip"></i>
+                {% else %}
+                <i class="fas fa-database"></i>
+                {% endif %}
+            </div>
             <div class="project-info">
                 <div class="project-category">{{ project.category }}</div>
                 <h3>{{ project.title }}</h3>

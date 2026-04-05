@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Clúster de Atractivos Turísticos
-category: Visualización de Datos
+category: Estadística e Inferencia
 description: Segmentación avanzada de puntos de interés turístico para optimizar la oferta regional.
 github_url: "https://github.com/manuelsancristobal"
 ---

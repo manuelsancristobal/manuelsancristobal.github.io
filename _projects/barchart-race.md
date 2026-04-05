@@ -1,7 +1,7 @@
 ---
 layout: project
-title: "BarchartRace: Movimiento Aéreo"
-category: Tendencias
+title: "Bar Chart Race: Movimiento Aéreo"
+category: Visualización de Datos
 description: Visualización dinámica del crecimiento y evolución del tráfico de pasajeros.
 github_url: "https://github.com/manuelsancristobal"
 ---
