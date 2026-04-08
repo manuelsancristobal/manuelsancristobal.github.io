@@ -10,6 +10,7 @@ github_url: "https://github.com/manuelsancristobal/barchart-race"
 
 Evolución histórica del mercado aéreo internacional de Chile mediante gráficos de barras animados. Incluye 8 combinaciones: tráfico emisivo/receptivo, por destinos/aerolíneas, medido en pasajeros o tonelaje de carga.
 
+{::nomarkdown}
 <div style="position: relative; width: 100%; padding-bottom: 75%; overflow: hidden;">
   <iframe
     src="./viz.html"
@@ -18,3 +19,4 @@ Evolución histórica del mercado aéreo internacional de Chile mediante gráfic
     title="Bar Chart Race: Movimiento Aéreo Internacional de Chile">
   </iframe>
 </div>
+{:/nomarkdown}
