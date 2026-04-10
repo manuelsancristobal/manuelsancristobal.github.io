@@ -8,7 +8,7 @@ github_url: "https://github.com/manuelsancristobal/barchart-race"
 
 ## Visualización Interactiva
 
-Este proyecto es una animación de la evolución histórica del mercado aéreo internacional de Chile, que incluye visualizaciones del tráfico emisivo y receptivo, tanto por destinos como por aerolíneas, medido en cantidad de pasajeros o tonelaje de carga.
+Este proyecto es una animación de la evolución histórica del mercado aéreo internacional de Chile, que incluye visualizaciones del tráfico emisivo y receptivo, tanto por destinos como por aerolíneas, y medido en cantidad de pasajeros o tonelaje de carga.
 
 {::nomarkdown}
 <div style="position: relative; width: 100%; padding-bottom: 75%; overflow: hidden;">
