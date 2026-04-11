@@ -11,6 +11,12 @@ layout: default
         <h1 style="font-size: 2.5rem; margin-top: 0.5rem; color: var(--primary);">{{ page.title }}</h1>
     </div>
 
+    {% if page.wip %}
+    <div class="wip-banner">
+        <i class="fas fa-hard-hat"></i> Este proyecto está en desarrollo. El contenido se actualizará próximamente.
+    </div>
+    {% endif %}
+
     <div class="project-content">
         {{ content }}
     </div>

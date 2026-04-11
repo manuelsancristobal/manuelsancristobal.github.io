@@ -70,6 +70,10 @@ nav a:hover, nav a.active {
     padding: 0 20px;
 }
 
+.container--wide {
+    max-width: 1200px;
+}
+
 section {
     margin-bottom: 4rem;
 }
@@ -96,8 +100,9 @@ h2 {
     box-shadow: var(--shadow);
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex; /* Flex para disposición horizontal */
-    flex-direction: row; 
+    flex-direction: row;
     min-height: 200px;
+    position: relative;
 }
 
 .project-card:hover {
@@ -175,6 +180,41 @@ h2 {
 
 .btn-project:hover {
     background: var(--primary);
+}
+
+/* WIP badge en tarjetas */
+.wip-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    z-index: 1;
+    letter-spacing: 0.5px;
+}
+
+.wip-badge i {
+    margin-right: 4px;
+}
+
+/* WIP banner en página de proyecto */
+.wip-banner {
+    background: #fff8e1;
+    border-left: 4px solid var(--accent);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.wip-banner i {
+    color: var(--accent);
+    margin-right: 6px;
 }
 
 /* Estilos de Sobre Mí / CV */
@@ -288,4 +328,45 @@ footer {
         flex-wrap: wrap;
         gap: 1rem;
     }
+}
+
+/* Easter egg banner */
+.easter-banner {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--text-light);
+    text-align: center;
+    padding: 0.6rem 2.5rem 0.6rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1001;
+}
+
+.easter-banner__emoji {
+    margin-right: 0.4rem;
+}
+
+.easter-banner__close {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    padding: 0.25rem;
+    line-height: 1;
+}
+
+.easter-banner__close:hover {
+    opacity: 1;
+}
+
+/* Smooth palette transitions for easter eggs */
+body, header, nav, footer, .project-visual, .skill-tag, .btn-project {
+    transition: background 0.4s ease, background-color 0.4s ease, color 0.3s ease;
 }

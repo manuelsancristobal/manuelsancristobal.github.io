@@ -12,6 +12,9 @@ description: Portafolio Profesional de Manuel San Cristóbal Opazo - Proyectos d
         {% assign projects = site.projects | reverse %}
         {% for project in projects %}
         <div class="project-card">
+            {% if project.wip %}
+            <span class="wip-badge"><i class="fas fa-hard-hat"></i> En desarrollo</span>
+            {% endif %}
             <div class="project-visual">
                 {% if project.category contains 'Visualización' %}
                 <i class="fas fa-chart-line"></i>

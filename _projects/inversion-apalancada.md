@@ -4,6 +4,7 @@ title: Inversión Apalancada
 category: Estadística e Inferencia
 description: Análisis de estrategias de inversión comparando modelos con y sin apalancamiento.
 github_url: "https://github.com/manuelsancristobal"
+wip: true
 ---
 
 ## Estudio Financiero

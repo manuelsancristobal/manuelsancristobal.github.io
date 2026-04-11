@@ -2,3 +2,7 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 Gemfile.lock
+.claude/
+wip-preview.html
+easter-eggs-preview.html
+easter-eggs-preview-standalone.html
