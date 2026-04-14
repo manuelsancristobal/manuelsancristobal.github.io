@@ -3,12 +3,12 @@ layout: default
 ---
 
 <article class="project-detail">
-    <div class="project-header" style="margin-bottom: 2rem;">
+    <div class="project-header">
         <a href="{{ '/' | relative_url }}" class="btn-back"><i class="fas fa-arrow-left"></i> Volver a Proyectos</a>
-        <div class="project-category" style="margin-top: 1.5rem; color: var(--secondary); font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
+        <div class="project-category">
             {{ page.category }}
         </div>
-        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; color: var(--primary);">{{ page.title }}</h1>
+        <h1>{{ page.title }}</h1>
     </div>
 
     {% if page.wip %}
@@ -21,31 +21,24 @@ layout: default
         {{ content }}
     </div>
 
-    {% if page.github_url %}
-    <div class="project-links" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
+    {% if page.github_url or page.tech_stack %}
+    <div class="project-footer">
+        {% if page.github_url %}
         <a href="{{ page.github_url }}" class="btn-project" target="_blank">
             <i class="fab fa-github"></i> Ver en GitHub
         </a>
+        {% endif %}
+
+        {% if page.tech_stack %}
+        <div class="tech-stack">
+            <div class="tech-stack__title">🛠 Stack Tecnológico</div>
+            <div class="tech-stack__tags">
+                {% for tech in page.tech_stack %}
+                <span class="tech-tag">{{ tech }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
     </div>
     {% endif %}
 </article>
-
-<style>
-    .btn-back {
-        text-decoration: none;
-        color: var(--text-dark);
-        font-weight: 600;
-        font-size: 0.9rem;
-        transition: color 0.3s;
-    }
-    .btn-back:hover {
-        color: var(--secondary);
-    }
-    .project-content h2 {
-        margin-top: 2rem;
-    }
-    .project-content p {
-        margin-bottom: 1.2rem;
-        font-size: 1.1rem;
-    }
-</style>

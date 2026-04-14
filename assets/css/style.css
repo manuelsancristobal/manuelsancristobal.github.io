@@ -225,6 +225,12 @@ h2 {
     align-items: center;
 }
 
+.cv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
 .cv-item {
     background: var(--white);
     padding: 1.5rem;
@@ -278,6 +284,65 @@ h2 {
     box-shadow: var(--shadow);
 }
 
+.project-header {
+    margin-bottom: 2rem;
+}
+
+.project-detail .project-category {
+    margin-top: 1.5rem;
+}
+
+.project-detail h1 {
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+    color: var(--primary);
+}
+
+/* Barra de cierre: GitHub + Stack */
+.project-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px dashed #ddd;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.project-footer .btn-project {
+    flex-shrink: 0;
+}
+
+.tech-stack {
+    flex: 1;
+    text-align: right;
+}
+
+.tech-stack__title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.tech-stack__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.tech-tag {
+    background: transparent;
+    border: 1.5px solid var(--secondary);
+    color: var(--secondary);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
 .project-content h2 {
     margin: 2rem 0 1rem;
     border-bottom: 2px solid var(--bg-light);
@@ -287,6 +352,11 @@ h2 {
 .project-content h3 {
     margin: 1.5rem 0 0.8rem;
     color: var(--secondary);
+}
+
+.project-content p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .project-content ul, .project-content ol {
@@ -304,6 +374,12 @@ h2 {
     text-decoration: none;
     color: var(--secondary);
     font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.btn-back:hover {
+    color: var(--primary);
 }
 
 footer {
@@ -320,9 +396,25 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .project-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .tech-stack {
+        text-align: left;
+    }
+    .tech-stack__tags {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
     .about-grid {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+    .cv-grid {
+        grid-template-columns: 1fr;
     }
     nav {
         flex-wrap: wrap;

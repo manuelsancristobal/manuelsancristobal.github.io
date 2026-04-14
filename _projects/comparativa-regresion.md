@@ -5,6 +5,9 @@ category: Estadística e Inferencia
 description: Evaluación de diferentes implementaciones de algoritmos de regresión.
 github_url: "https://github.com/manuelsancristobal"
 wip: true
+tech_stack:
+  - Python
+  - Scikit-learn
 ---
 
 ## Optimización de Algoritmos

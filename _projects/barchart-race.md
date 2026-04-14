@@ -4,6 +4,10 @@ title: "Bar Chart Race: Movimiento Aéreo"
 category: Visualización de Datos
 description: Animación de la evolución y avance del tráfico aéreo internacional, desde y hacia Chile entre el periodo 1984 y 2026.
 github_url: "https://github.com/manuelsancristobal/barchart-race"
+tech_stack:
+  - JavaScript
+  - D3.js
+  - CSS
 ---
 
 ## Visualización Interactiva

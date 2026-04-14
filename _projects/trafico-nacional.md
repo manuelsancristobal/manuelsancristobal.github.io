@@ -5,6 +5,9 @@ category: Visualización de Datos
 description: Análisis visual de flujos aéreos entre regiones de Chile.
 github_url: "https://github.com/manuelsancristobal"
 wip: true
+tech_stack:
+  - Python
+  - Deck.gl
 ---
 
 ## Análisis Regional

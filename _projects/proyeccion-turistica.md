@@ -4,6 +4,12 @@ title: "Proyección Turística Chile"
 category: Estadística e Inferencia
 description: Dashboard interactivo con modelado estadístico para proyectar flujos turísticos de Chile, integrando datos de SERNATUR y la Junta Aeronáutica Civil.
 github_url: "https://github.com/manuelsancristobal"
+tech_stack:
+  - Python
+  - R
+  - R Shiny
+  - ARIMA
+  - SARIMAX
 ---
 
 ## Dashboard Interactivo

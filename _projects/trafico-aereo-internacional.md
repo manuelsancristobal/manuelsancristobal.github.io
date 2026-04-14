@@ -5,6 +5,9 @@ category: Visualización de Datos
 description: Visualización geoespacial de llegadas de pasajeros internacionales en 2024.
 github_url: "https://github.com/manuelsancristobal"
 wip: true
+tech_stack:
+  - Python
+  - Deck.gl
 ---
 
 ## Descripción
