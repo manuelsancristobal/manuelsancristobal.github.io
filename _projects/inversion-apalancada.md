@@ -74,16 +74,23 @@ Cada simulación automáticamente descuenta:
 ## Resultados
 
 **Estrategia de Apalancamiento Agresivo:**
-- Patrimonio promedio al mes 60: **$38 millones**
-- Probabilidad de superar $30M: **65%**
-- Rango intercuartil (25%-75%): $22M - $50M
-- Peor 5% de casos: $8M | Mejor 5% de casos: $72M
+- Patrimonio promedio al mes 60: **~$56 millones**
+- Rango P10-P90: $26M - $93M
+- Alta dispersión: máximo potencial pero también mayor riesgo
 
-**Estrategia de Aportes Moderados:**
-- Patrimonio promedio al mes 60: **$32 millones**
-- Probabilidad de superar $30M: **58%**
-- Rango intercuartil (25%-75%): $27M - $37M
-- Peor 5% de casos: $23M | Mejor 5% de casos: $42M
+**Estrategia de Aportes Agresivos (sin deuda):**
+- Patrimonio promedio al mes 60: **~$62 millones**
+- Rango P10-P90: $41M - $87M
+- Mejor rendimiento promedio con menor dispersión que el apalancado
+
+**Estrategia de Apalancamiento Moderado:**
+- Patrimonio promedio al mes 60: **~$48 millones**
+- Rango P10-P90: $29M - $69M
+
+**Estrategia de Aportes Moderados (sin deuda):**
+- Patrimonio promedio al mes 60: **~$56 millones**
+- Rango P10-P90: $43M - $71M
+- Menor dispersión de todas las estrategias
 
 ## La Decisión Final
 

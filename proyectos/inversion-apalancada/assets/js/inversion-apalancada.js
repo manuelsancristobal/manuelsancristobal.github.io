@@ -7,7 +7,6 @@
   const DATA_PATH = "assets/data/simulation_stats.json";
 
   // Formateo números
-  const fmt = (v) => new Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP", maximumFractionDigits: 0 }).format(v);
   const fmtM = (v) => `$${(v / 1e6).toFixed(1)}M`;
 
   // ── Estado ─────────────────────────────────────────────
@@ -72,21 +71,8 @@
     }
   }
 
-  function getMonthData(monthIdx) {
-    const strategies = {};
-    for (const [key, strat] of Object.entries(state.data.strategies)) {
-      strategies[key] = {
-        label: strat.label,
-        color: strat.color,
-        promedio: strat.promedio[monthIdx],
-        p10: strat.p10[monthIdx],
-        p90: strat.p90[monthIdx],
-        min: strat.min[monthIdx],
-        max: strat.max[monthIdx],
-      };
-    }
-    return strategies;
-  }
+  // Todas las claves de estrategia para poder limpiar SVG al hacer toggle
+  const ALL_STRATEGY_KEYS = ["agresivo_apalancado", "agresivo_sin_apalancamiento", "moderado_apalancado", "moderado_sin_apalancamiento"];
 
   function draw(monthIdx) {
     if (!state.data) return;
@@ -130,6 +116,17 @@
       .attr("opacity", 0.6);
 
     gMeta.append("text").attr("x", innerWidth + 5).attr("y", y(30e6) + 4).attr("font-size", "11px").attr("fill", "black").text("Meta $30M");
+
+    // Limpiar estrategias ocultas
+    for (const key of ALL_STRATEGY_KEYS) {
+      if (!state.visibleStrategies.has(key)) {
+        gLines.selectAll(`.area-${key}`).remove();
+        gLines.selectAll(`.line-${key}`).remove();
+        gLines.selectAll(`.line-min-${key}`).remove();
+        gLines.selectAll(`.line-max-${key}`).remove();
+        gLines.selectAll(`.dot-${key}`).remove();
+      }
+    }
 
     // Dibujar estrategias
     for (const key of visibleKeys) {
@@ -248,6 +245,12 @@
   }
 
   function play() {
+    // Reiniciar si ya está al final
+    if (state.monthIndex >= 60) {
+      state.monthIndex = 0;
+      draw(0);
+    }
+
     state.playing = true;
     btnPlay.textContent = "⏸ Pausa";
     btnPlay.classList.add("playing");
