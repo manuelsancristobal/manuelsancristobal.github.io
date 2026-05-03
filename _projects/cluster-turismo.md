@@ -56,9 +56,9 @@ Los atractivos turísticos en Chile presentan densidades muy variables — zonas
 
 Respecto a la métrica de distancia, inicialmente probé K-means, pero los clústeres resultantes mostraban puntos lejanos como agrupados. Esto ocurre porque K-means usa distancia euclidiana, que no considera la curvatura de la Tierra. La **métrica Haversine** calcula la distancia esférica real entre coordenadas geográficas.
 
-Respecto del parámetro `min_cluster_size=10`, definí que grupo de al menos 10 atractivos constituye un clúster territorial relevante.
+Respecto del parámetro `min_cluster_size=10`, definí que un grupo de al menos 10 atractivos constituye un clúster territorial relevante.
 
-**Resultado:** 79 clústeres identificados. El 33.2% de los atractivos no se asigna a ningún clúster — estos puntos de ruido requieren un análisis más profundo que abordamos en la sección 5.
+**Resultado:** 79 clústeres identificados, donde el 33.2% de los atractivos no se asigna a ningún clúster. Estos puntos de ruido requieren un análisis más profundo que abordamos en la sección 5.
 
 ### Distribución por Clústeres
 
@@ -70,19 +70,15 @@ Respecto del parámetro `min_cluster_size=10`, definí que grupo de al menos 10 
 
 El concepto proviene del **retail**: en un centro comercial, la tienda ancla es aquella marca de alto reconocimiento que genera el flujo de visitantes del que se benefician todas las demás tiendas. En turismo, la lógica es la misma: un **atractivo ancla** es aquel de jerarquía superior cuyo reconocimiento motiva el desplazamiento de turistas hacia un destino, beneficiando al resto de la oferta turística local.
 
-Esta idea se formaliza en la <abbr title="Golledge, R. G. (1978). Learning about urban environments. En T. Carlstein, D. Parkes, & N. Thrift (Eds.), Timing space and spacing time: Vol. 1. Making sense of time (pp. 76–98). Edward Arnold.">*anchor-Point Theory*</abbr> que explica cómo mapeamos la ciudad, esta propone que las personas organizan su conocimiento espacial de forma jerárquica alrededor de puntos ancla de mayor importancia.
+Esta idea se formaliza en la <abbr title="Golledge, R. G. (1978). Learning about urban environments. En T. Carlstein, D. Parkes, & N. Thrift (Eds.), Timing space and spacing time: Vol. 1. Making sense of time (pp. 76–98). Edward Arnold.">*Anchor-Point Theory*</abbr> que explica cómo mapeamos la ciudad, esta propone que las personas organizan su conocimiento espacial de forma jerárquica alrededor de puntos ancla de mayor importancia.
 
 ### Clasificación de clústeres
 
 En este sentido, definí tres categorías según la presencia de atractivos con jerarquía superior para los 79 clústeres:
 
-| Categoría | Definición | N° Clústeres |
-|---|---|---|
-| **Con ancla internacional** | Al menos 1 atractivo de jerarquía internacional | 52 |
-| **Solo ancla nacional** | Al menos 1 nacional, pero 0 internacional | 26 |
-| **Sin ancla** | Sin atractivos nacional ni internacional | 1 |
-
-
+**Con ancla internacional**: 52 Cluster con al menos 1 atractivo de jerarquía internacional
+**Solo ancla nacional**: 26 Cluster con al menos 1 atractivo de jerarquía nacional y 0 internacional
+**Sin ancla**: 1 Cluster sin atractivos nacional ni internacional
 
 Los clústeres **"solo ancla nacional"** (33% del total) son los más interesantes desde una perspectiva de política pública, ya tienen masa crítica turística reconocida a nivel país, pero carecen de un atractivo de proyección internacional. Estos representan **oportunidades de inversión** para elevar su competitividad.
 
