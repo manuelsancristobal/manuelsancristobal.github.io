@@ -78,9 +78,10 @@ En este sentido, definí tres categorías según la presencia de atractivos con 
 
 | Categoría | Definición | N° Clústeres |
 |---|---|---|
-| **Con ancla internacional** | Al menos 1 atractivo de jerarquía INTERNACIONAL | 52 |
-| **Solo ancla nacional** | Al menos 1 NACIONAL, pero 0 INTERNACIONAL | 26 |
-| **Sin ancla** | Sin atractivos NACIONAL ni INTERNACIONAL | 1 |
+| **Con ancla internacional** | Al menos 1 atractivo de jerarquía internacional | 52 |
+| **Solo ancla nacional** | Al menos 1 nacional, pero 0 internacional | 26 |
+| **Sin ancla** | Sin atractivos nacional ni internacional | 1 |
+
 
 
 Los clústeres **"solo ancla nacional"** (33% del total) son los más interesantes desde una perspectiva de política pública, ya tienen masa crítica turística reconocida a nivel país, pero carecen de un atractivo de proyección internacional. Estos representan **oportunidades de inversión** para elevar su competitividad.
