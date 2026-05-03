@@ -38,7 +38,7 @@ El mapa a continuación muestra los 3.996 atractivos coloreados por jerarquía. 
 
 ## 1. Exploración Inicial
 
-El dataset contiene 4.048 atractivos turísticos. Para este análisis nos centramos en los **atractivos permanentes**, descartando los "Acontecimientos Programados" (eventos temporales), y luego de validar coordenadas dentro de los límites continentales de Chile, nos quedamos con **3.996 registros**.
+El dataset contiene 4.048 atractivos turísticos, donde nos centramos en los **atractivos permanentes**, descartando los "Acontecimientos Programados" (eventos temporales), y luego de validar coordenadas dentro de los límites continentales de Chile, nos quedamos con **3.996 registros**.
 
 Cada atractivo está clasificado por jerarquía: Local, Regional, Nacional o Internacional.
 
