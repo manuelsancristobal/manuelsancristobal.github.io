@@ -12,15 +12,11 @@ tech_stack:
   - SARIMAX
 ---
 
-## Dinámicas de Recuperación y Crecimiento
+## Dashboard Interactivo: Dinámicas de Recuperación y Crecimiento
 
 **La recuperación del flujo turístico en Chile ha superado los niveles previos a la pandemia, manteniendo una tendencia de crecimiento constante.** Como se aprecia en la visualización de proyecciones, tanto el flujo de residentes al extranjero como la llegada de turistas internacionales muestran una trayectoria alcista sólida para los próximos meses.
 
-Puedes acceder al dashboard en pantalla completa [**en Shinyapps*](https://manuel-san-cristobal-opazo.shinyapps.io/dashboard/).
-
-## Dashboard Interactivo de Pronósticos
-
-Explora las proyecciones de turismo emisivo y receptivo con filtros dinámicos y modelos estadísticos avanzados.
+Puedes acceder al dashboard en pantalla completa [**en Shinyapps**](https://manuel-san-cristobal-opazo.shinyapps.io/dashboard/).
 
 <div style="position: relative; width: 100%; padding-bottom: 75%; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <iframe
@@ -33,27 +29,28 @@ Explora las proyecciones de turismo emisivo y receptivo con filtros dinámicos y
 </div>
 
 <p style="font-size: 12px; color: #999; margin-top: 8px; text-align: center;">
-  Si la aplicación interactiva no carga por límite de cuota.
+  Si la aplicación interactiva no carga, puede ser por límite de cuota.
 </p>
 
 ## Análisis de Series Temporales
 
 ### Proyección de Salidas de Residentes
-**Los modelos ARIMA y SARIMAX confirman la consolidación de la tendencia alcista tras el impacto sanitario.** Como se aprecia en el gráfico de proyecciones, el modelo SARIMAX mejora la precisión al integrar el periodo pandémico de forma específica. La recuperación no solo es total, sino que marca nuevos récords de flujo mes a mes.
+**Los modelos ARIMA y SARIMAX confirman la consolidación de la tendencia al alza tras el impacto sanitario.** Como se aprecia en el gráfico de proyecciones, el modelo SARIMAX mejora la precisión al integrar tanto el periodo pandémico (marzo 2020 y septiembre 2020), como el periodo de reahbilitación (octubre 2020 y septiembre 2022), como variables exógenas. La recuperación no solo es total, sino que marca nuevos récords de flujo.
 
 ![Salidas de residentes con tendencia y proyecciones ARIMA/SARIMAX](./assets/charts/01_salidas_proyeccion.png)
 
 ---
 
 ### Concentración de Mercados Emisores
-**Argentina lidera con fuerza el volumen de llegadas, mientras otros mercados regionales muestran ritmos de recuperación dispares.** Como se observa en la comparativa de nacionalidades, la base de visitantes hacia Chile posee una dependencia elevada del mercado regional, lo que plantea desafíos y oportunidades de diversificación.
+**Argentina lidera con fuerza el volumen de llegadas, mientras otros mercados regionales muestran ritmos de recuperación dispares.** Como se observa a continuación, en la comparativa de nacionalidades, la base de visitantes hacia Chile posee una dependencia elevada del mercado regional (América del Sur), lo que plantea desafíos y oportunidades de diversificación.
 
 ![Top 5 mercados emisores de turistas hacia Chile](./assets/charts/02_llegadas_nacionalidad.png)
 
 ---
 
 ### Capacidad y Oferta Aérea
-El incremento en la frecuencia de vuelos, impulsado por operadores de bajo costo, actúa como motor de la demanda turística. Como se aprecia en la visualización con suavizado LOESS, el número de operaciones internacionales refleja un cambio de estructura en la industria. Este fenómeno de apertura competitiva, detallado en el análisis de concentración del [**Bar Chart Race: Movimiento Aéreo**](/proyectos/barchart-race/), facilita la estabilidad de los flujos y mejora la precisión de los pronósticos de largo plazo.
+
+La reestructuración en la frecuencia de vuelos, acelerada por la entrada de operadores de bajo en 2012, refleja una consolidación de la oferta aérea internacional. Como se aprecia en la visualización de Frecuencia de vuelos internacionales salientes, las operaciones mensuales han descendido desde su máximo histórico de los años noventa para estabilizarse en torno a las 120 mensuales, mientras el volumen de pasajeros se ha cuadruplicado (pasando de ~440 pasajeros por operación en 1998 a más de 4.400 en 2025). Este fenómeno de racionalización competitiva, tambien detallado en el análisis de concentración del [**Bar Chart Race: Movimiento Aéreo**](/proyectos/barchart-race/), redefine la estructura de los flujos y su impacto en los pronósticos de largo plazo.
 
 ![Frecuencia de vuelos internacionales salientes con suavizado LOESS](./assets/charts/03_frecuencia_vuelos.png)
 
