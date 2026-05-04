@@ -44,7 +44,7 @@ tech_stack:
 
 ## 3. Análisis de Atractivos Ancla e Impacto en Rutas
 
-**Uno de cada tres clústeres posee infraestructura nacional pero carece de un atractivo ancla de jerarquía internacional.** Según la *Anchor-Point Theory*, la ausencia de un motor de desplazamiento global limita el potencial de crecimiento del entorno. Como se puede apreciar en el proyecto de [**Bar Chart Race: Movimiento Aéreo**](/proyectos/barchart-race/), la resiliencia de las rutas internacionales hacia Chile está ligada de modo estrecho a la jerarquía de los destinos que conectan.
+**Uno de cada tres clústeres posee infraestructura nacional pero carece de un atractivo ancla de jerarquía internacional.** Según la <abbr title="Golledge, R. G. (1978). Learning about urban environments. En T. Carlstein, D. Parkes, & N. Thrift (Eds.), Timing space and spacing time: Vol. 1. Making sense of time (pp. 76–98). Edward Arnold.">Anchor-Point Theory</abbr>, la ausencia de un motor de desplazamiento global limita el potencial de crecimiento del entorno. Como se puede apreciar en el proyecto de [**Bar Chart Race: Movimiento Aéreo**](/proyectos/barchart-race/), la resiliencia de las rutas internacionales hacia Chile está ligada de modo estrecho a la jerarquía de los destinos que conectan.
 
 ![Distribución de clústeres por categoría de ancla](./assets/img/donut_anclas.png)
 
