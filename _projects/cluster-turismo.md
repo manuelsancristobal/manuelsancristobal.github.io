@@ -18,7 +18,7 @@ tech_stack:
   - pytest
 ---
 
-**Chile posee territorios con masa crítica suficiente para ser destinos consolidados que permanecen invisibles para la política pública.** Mediante el uso de clustering espacial HDBSCAN sobre **3.996 atractivos permanentes**, este análisis identifica 94 clústeres consolidados y descubre 26 clústeres emergentes que operan fuera del radar oficial, constituyendo lo que defino como la "Masa Crítica Invisible".
+**Chile posee territorios con masa crítica suficiente para ser destinos consolidados que permanecen invisibles para la política pública.** Mediante el uso de clustering espacial HDBSCAN sobre **3.996 atractivos permanentes**, este análisis identifica 94 clústeres consolidados y descubre 26 clústeres emergentes que operan fuera del radar oficial, constituyendo lo que defino como la "Clústeres Emergentes".
 
 <div style="position: relative; width: 100%; padding-bottom: 75%; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <iframe
@@ -32,7 +32,7 @@ tech_stack:
 
 [Ver en pantalla completa](/proyectos/cluster-turismo/assets/mapa_interactivo.html){: .btn .btn--primary }
 
-## 1. Hallazgo: La "Masa Crítica Invisible"
+## 1. Hallazgo: La "Clústeres Emergentes"
 
 **Existen clústeres emergentes con un volumen de atractivos idéntico al de los destinos principales de Chile.** Al re-analizar los datos descartados por el modelo inicial, identifiqué territorios con una mediana de ~25 atractivos locales y regionales. Estos destinos poseen el potencial necesario para captar flujos, pero carecen de la jerarquía requerida para "activar" el radar de inversión pública de modo automático.
 
@@ -60,11 +60,17 @@ tech_stack:
 
 ---
 
-## Conclusión: Motores Listos para la Inversión
+## Conclusión: Impulsando los motores del turismo nacional
 
-El desarrollo turístico de Chile no requiere crear destinos desde cero, sino elevar la jerarquía de los motores existentes:
-- **Arbitraje de inversión:** Crear anclas internacionales en clústeres de "solo ancla nacional" para potenciar el flujo capturado en las rutas analizadas en [**Bar Chart Race**](/proyectos/barchart-race/).
-- **Gestión Inteligente:** Utilizar datos espaciales para localizar las gobernanzas propuestas por el sector público de modo estratégico.
+El desarrollo turístico de Chile no requiere crear destinos desde cero, sino reconocer y fortalecer lo que ya late en el territorio. Para que estas oportunidades se transformen en realidad, es **vital el rol activo de las autoridades regionales y el empuje de los empresarios locales**, quienes son los llamados a descubrir y explotar el potencial que los datos aquí revelan.
+
+Mis principales propuestas para avanzar hacia un desarrollo territorial efectivo son:
+
+*   **Inversión con visión global:** No basta con inyectar recursos; debemos elevar el estándar. Transformar clústeres de alcance nacional en destinos con "anclas" internacionales permitiría capturar y potenciar los flujos de viajeros analizados en proyectos como el [**Bar Chart Race: Movimiento Aéreo**](/proyectos/barchart-race/).
+*   **Gestión territorial inteligente:** En lugar de aplicar fórmulas genéricas, debemos usar datos espaciales para que la política pública llegue exactamente donde ya existe actividad latente, optimizando el impacto de cada inversión.
+*   **Modernización del Catastro:** Existe una **necesidad fundamental de actualizar el catastro nacional de atractivos turísticos**. Un análisis de precisión solo es tan bueno como sus datos de base; contar con un registro al día es la piedra angular para que el Estado y el sector privado tomen decisiones sobre el territorio real y no sobre registros obsoletos.
+
+Finalmente, este camino abre nuevas líneas de estudio. **Se requiere más investigación para dimensionar el impacto de las actividades tipo eventos (festivales, congresos o hitos deportivos) que funcionan como anclas de jerarquía superior.** Entender si estos hitos temporales pueden ser el catalizador definitivo para consolidar un clúster emergente será clave para diseñar un turismo que no solo sea dinámico, sino también resiliente y sostenible en el tiempo.
 
 <div class="methodology-box" style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-light); border-radius: 8px; border-left: 4px solid var(--secondary);">
     <p style="margin: 0; font-size: 0.95rem;">📌 <strong>Sobre este proyecto:</strong> Esta es una versión rediseñada como aplicación interactiva. El proyecto original está disponible en <a href="https://colab.research.google.com/drive/1S8SzY1u5VMOl1POjpBA1c02yPm-uK5r1?usp=sharing" target="_blank" style="color: var(--secondary); font-weight: 600;">Google Colab</a>.</p>
