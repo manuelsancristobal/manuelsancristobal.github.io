@@ -30,6 +30,8 @@ tech_stack:
   </iframe>
 </div>
 
+[Ver en pantalla completa](/proyectos/cluster-turismo/assets/mapa_interactivo.html){: .btn .btn--primary }
+
 ## 1. Hallazgo: La "Masa Crítica Invisible"
 
 **Existen clústeres emergentes con un volumen de atractivos idéntico al de los destinos principales de Chile.** Al re-analizar los datos descartados por el modelo inicial, identifiqué territorios con una mediana de ~25 atractivos locales y regionales. Estos destinos poseen el potencial necesario para captar flujos, pero carecen de la jerarquía requerida para "activar" el radar de inversión pública de modo automático.

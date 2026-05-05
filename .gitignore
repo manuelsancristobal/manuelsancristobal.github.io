@@ -1,8 +1,32 @@
+# Jekyll specific
 _site/
 .jekyll-cache/
 .jekyll-metadata
 Gemfile.lock
-.claude/
 wip-preview.html
 easter-eggs-preview.html
 easter-eggs-preview-standalone.html
+
+### --- PROFESSIONAL STANDARDS ---
+
+# Environments & Secrets
+.env
+.venv/
+env/
+venv/
+*.env
+auth.json
+
+# AI Assistants
+.claude/
+.gemini/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating System
+.DS_Store
+Thumbs.db
