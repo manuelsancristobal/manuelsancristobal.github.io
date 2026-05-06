@@ -18,7 +18,7 @@ tech_stack:
   - pytest
 ---
 
-**Chile posee territorios con masa crítica suficiente para ser destinos consolidados que permanecen invisibles para la política pública.** Mediante el uso de clustering espacial HDBSCAN sobre **3.996 atractivos permanentes**, este análisis identifica 94 clústeres consolidados y descubre 26 clústeres emergentes que operan fuera del radar oficial, constituyendo lo que defino como la "Clústeres Emergentes".
+**Chile posee territorios con masa crítica suficiente para ser destinos consolidados que permanecen invisibles para la política pública.** Mediante un <abbr title="Proceso de Extracción, Transformación y Carga de datos">pipeline ETL</abbr> sobre **3.996 atractivos permanentes**, este análisis identifica 94 clústeres consolidados y descubre clústeres emergentes que operan fuera del radar oficial.
 
 <div style="position: relative; width: 100%; padding-bottom: 75%; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <iframe
@@ -32,31 +32,31 @@ tech_stack:
 
 [Ver en pantalla completa](/proyectos/cluster-turismo/assets/mapa_interactivo.html){: .btn .btn--primary }
 
-## 1. Hallazgo: La "Clústeres Emergentes"
+## 1. Ingeniería de Datos y Limpieza Espacial
 
-**Existen clústeres emergentes con un volumen de atractivos idéntico al de los destinos principales de Chile.** Al re-analizar los datos descartados por el modelo inicial, identifiqué territorios con una mediana de ~25 atractivos locales y regionales. Estos destinos poseen el potencial necesario para captar flujos, pero carecen de la jerarquía requerida para "activar" el radar de inversión pública de modo automático.
+La robustez del análisis nace de la integración de fuentes heterogéneas. El proceso comienza con la **extracción** de datos brutos desde archivos Excel de SERNATUR y polígonos <abbr title="Keyhole Markup Language Zipped">KMZ</abbr> de destinos oficiales. Mediante un <abbr title="Operación que une dos conjuntos de datos basándose en su ubicación geográfica y geometría">cruce espacial</abbr> y una limpieza rigurosa, se eliminaron eventos temporales y coordenadas fuera de los límites continentales, para asegurar que el modelo trabaje solo sobre la oferta turística estructural del país.
+
+## 2. Hallazgo: Clústeres Emergentes y "Ruido" Geográfico
+
+**Existen territorios con un potencial de captación idéntico al de los destinos consolidados.** Al re-analizar los datos clasificados en un inicio como <abbr title="Puntos de datos que el algoritmo no logra agrupar por baja densidad o dispersión">ruido</abbr>, identifiqué clústeres emergentes con una mediana de ~25 atractivos. Estos destinos poseen la masa crítica necesaria para captar flujos, pero su dispersión geográfica los mantenía invisibles para los modelos tradicionales de inversión pública.
 
 ![Boxplot: Destinos oficiales vs clústeres rezagados](./assets/img/comparativa_boxplot.png)
 
-## 2. Diagnóstico de Superposición y Gestión de Brechas
+## 3. Diagnóstico de Superposición y Gestión de Brechas
 
-**La identificación de clústeres "de forma genuina rezagados" permite focalizar esfuerzos de gobernanza donde no existen estructuras previas.** Como se aprecia en la clasificación de superposición, estos vacíos de cobertura son prioridades para la implementación de nuevos modelos de gestión. Por otro lado, los clústeres con superposición parcial ofrecen oportunidades de especialización sin duplicar esfuerzos institucionales.
+**La identificación de clústeres de "rezago genuino" permite focalizar esfuerzos donde no existen estructuras previas.** Al comparar la geometría de nuestros hallazgos con los límites de destinos oficiales, detectamos vacíos de cobertura que son prioridad para nuevos modelos de gestión. Los clústeres con superposición parcial ofrecen oportunidades de especialización sin duplicar esfuerzos institucionales existentes.
 
 ![Clasificación de superposición entre clústeres](./assets/img/donut_superposicion.png)
 
-## 3. Análisis de Atractivos Ancla e Impacto en Rutas
+## 4. Análisis de Atractivos Ancla e Impacto en Rutas
 
-**Uno de cada tres clústeres posee infraestructura nacional pero carece de un atractivo ancla de jerarquía internacional.** Según la <abbr title="Golledge, R. G. (1978). Learning about urban environments. En T. Carlstein, D. Parkes, & N. Thrift (Eds.), Timing space and spacing time: Vol. 1. Making sense of time (pp. 76–98). Edward Arnold.">Anchor-Point Theory</abbr>, la ausencia de un motor de desplazamiento global limita el potencial de crecimiento del entorno. Como se puede apreciar en el proyecto de [**Bar Chart Race: Movimiento Aéreo**](/proyectos/barchart-race/), la resiliencia de las rutas internacionales hacia Chile está ligada de modo estrecho a la jerarquía de los destinos que conectan.
+**Uno de cada tres clústeres posee infraestructura nacional pero carece de un atractivo ancla de jerarquía internacional.** Según la <abbr title="Teoría que postula que los viajeros estructuran su conocimiento del espacio en torno a puntos dominantes o hitos">Anchor-Point Theory</abbr>, la ausencia de un motor de desplazamiento global limita el crecimiento del entorno. Como se observa en el proyecto de [**Bar Chart Race: Movimiento Aéreo**](/proyectos/barchart-race/), la resiliencia de las rutas internacionales está ligada en forma directa a la jerarquía de los destinos que conectan.
 
 ![Distribución de clústeres por categoría de ancla](./assets/img/donut_anclas.png)
 
-## 4. Metodología de Clustering Espacial HDBSCAN
+## 5. Metodología de Clustering Espacial HDBSCAN
 
-**El uso de HDBSCAN permite capturar agrupaciones de densidad variable a lo largo de la geografía nacional.** A diferencia de otros modelos, este algoritmo se adapta de forma orgánica a zonas de alta concentración como Santiago y a áreas dispersas en la Patagonia. La aplicación de la métrica Haversine asegura un cálculo de distancia esférica real de modo exacto sobre la superficie terrestre.
-
-## 5. Caracterización de Atractivos no Agrupados
-
-**Regiones como O'Higgins y Biobío concentran la mayor cantidad de atractivos fragmentados con potencial de consolidación.** Estos puntos, clasificados en una primera instancia como ruido, revelan una oportunidad de crecimiento territorial subutilizado. La consolidación de estos atractivos en destinos integrados es una de las mayores brechas identificadas de modo estructural en el estudio.
+Para procesar esta densidad variable, utilizamos <abbr title="Hierarchical Density-Based Spatial Clustering of Applications with Noise">HDBSCAN</abbr>. Este algoritmo se adapta de forma orgánica a zonas de alta concentración y áreas dispersas como la Patagonia. La implementación incluye la métrica **Haversine** para garantizar cálculos de distancia esférica exactos sobre la superficie terrestre, transformando coordenadas planas en clústeres con relevancia geográfica real.
 
 ---
 
@@ -67,7 +67,7 @@ El desarrollo turístico de Chile no requiere crear destinos desde cero, sino re
 Mis principales propuestas para avanzar hacia un desarrollo territorial efectivo son:
 
 *   **Inversión con visión global:** No basta con inyectar recursos; debemos elevar el estándar. Transformar clústeres de alcance nacional en destinos con "anclas" internacionales permitiría capturar y potenciar los flujos de viajeros analizados en proyectos como el [**Bar Chart Race: Movimiento Aéreo**](/proyectos/barchart-race/).
-*   **Gestión territorial inteligente:** En lugar de aplicar fórmulas genéricas, debemos usar datos espaciales para que la política pública llegue exactamente donde ya existe actividad latente, optimizando el impacto de cada inversión.
+*   **Gestión territorial inteligente:** En lugar de aplicar fórmulas genéricas, debemos usar datos espaciales para que la política pública llegue de forma exacta donde ya existe actividad latente, optimizando el impacto de cada inversión.
 *   **Modernización del Catastro:** Existe una **necesidad fundamental de actualizar el catastro nacional de atractivos turísticos**. Un análisis de precisión solo es tan bueno como sus datos de base; contar con un registro al día es la piedra angular para que el Estado y el sector privado tomen decisiones sobre el territorio real y no sobre registros obsoletos.
 
 Finalmente, este camino abre nuevas líneas de estudio. **Se requiere más investigación para dimensionar el impacto de las actividades tipo eventos (festivales, congresos o hitos deportivos) que funcionan como anclas de jerarquía superior.** Entender si estos hitos temporales pueden ser el catalizador definitivo para consolidar un clúster emergente será clave para diseñar un turismo que no solo sea dinámico, sino también resiliente y sostenible en el tiempo.
