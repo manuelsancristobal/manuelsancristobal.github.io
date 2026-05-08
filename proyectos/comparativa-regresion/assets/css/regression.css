@@ -160,23 +160,10 @@ input[type="checkbox"] {
   margin-bottom: 20px;
 }
 
-@media (max-width: 1400px) {
-  .panels {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .panels > :first-child {
-    grid-column: span 2;
-  }
-}
-
 @media (max-width: 900px) {
   .panels {
     grid-template-columns: 1fr;
-  }
-
-  .panels > :first-child {
-    grid-column: span 1;
+    grid-template-rows: auto;
   }
 }
 
@@ -196,6 +183,8 @@ input[type="checkbox"] {
 
 svg {
   display: block;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   background: white;
 }
@@ -400,6 +389,19 @@ footer {
   text-align: center;
   color: #999;
   font-size: 0.9em;
+}
+
+/* Reference lines (sklearn fixed) */
+.reference-line {
+  stroke-dasharray: 6, 4;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.reference-label {
+  opacity: 0.6;
+  font-size: 11px;
+  pointer-events: none;
 }
 
 /* Utilities */
