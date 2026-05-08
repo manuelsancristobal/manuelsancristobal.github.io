@@ -363,7 +363,7 @@ h2 {
     box-shadow: var(--shadow);
 }
 
-.project-content p {
+.project-content p, .post-content p {
     margin-bottom: 1.2rem;
     font-size: 1.1rem;
 }

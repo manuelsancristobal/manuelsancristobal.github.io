@@ -11,7 +11,6 @@ For this session, we selected a trending topic: *Movies and Series*, using the r
 
 The highlight, however, was *The Logistics Lead's* initiative: he prepared cards with random questions for participants to select. His attention to detail showed me a fundamental need that I hadn't realized; I think when people feel a sense of ownership, they also feel responsibility.
 
-
 ### Word of the Week:
 > **To Practice Beforehand:** To perform an activity or exercise regularly in order to improve or maintain one's proficiency before a specific event.
 > *Usage: "The lead was nervous, but he practiced beforehand to make the session a success."*
