@@ -1,0 +1,40 @@
+---
+layout: default
+title: "English Coffee Talks - Manuel San Cristóbal"
+header_title: "English Coffee Talks"
+header_subtitle: "Weekly team conversations to improve English fluency and leadership"
+---
+
+<section class="intro-section" style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">
+    <h2>The Initiative</h2>
+    <p>
+        I facilitate weekly English conversation sessions at my workplace. 
+        The goal is to provide a safe space for colleagues to practice technical and professional English 
+        while discussing relevant industry topics, leadership, and soft skills.
+    </p>
+</section>
+
+<div class="timeline">
+    {% for post in site.posts %}
+    <div class="timeline-item {% cycle 'left', 'right' %}">
+        <div class="timeline-content">
+            <span class="timeline-date">{{ post.date | date: "%B %d, %Y" }}</span>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            <a href="{{ post.url | relative_url }}" class="timeline-link">Read full highlights &rarr;</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% if site.posts.size == 0 %}
+<div style="text-align: center; padding: 4rem;">
+    <p style="color: #888; font-style: italic;">No talks have been registered yet. Stay tuned!</p>
+</div>
+{% endif %}
+
+<div style="margin-top: 5rem; text-align: center;">
+    <a href="{{ '/' | relative_url }}" class="timeline-link" style="color: var(--secondary); font-size: 1.1rem;">
+        <i class="fas fa-home"></i> Back to Projects
+    </a>
+</div>

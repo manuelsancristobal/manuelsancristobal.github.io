@@ -5,5 +5,6 @@
 
 <nav>
     <a href="{{ '/' | relative_url }}" {% if page.url == "/" or page.url == "/index.html" or page.collection == "projects" %}class="active"{% endif %}>Proyectos</a>
+    <a href="{{ '/english-talks.html' | relative_url }}" {% if page.url contains "english-talks" or page.layout == "post" %}class="active"{% endif %}>English Talks</a>
     <a href="{{ '/sobre-mi.html' | relative_url }}" {% if page.url == "/sobre-mi.html" %}class="active"{% endif %}>Sobre Mí</a>
 </nav>
